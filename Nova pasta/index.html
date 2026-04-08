@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+    <body>
+        <div class="container">
+            <h1>Buffet do Heitor</h1>
+            <h3>Pedidos</h3>
+            <input type="button" id="addPedido" value="Adicionar pedido" onclick="addPedido">
+            <hr>
+            <form id="formPedido" style="display: none; margin-top: 20px;">
+                <input type="text" id="nome" placeholder="Nome do Cliente" required><br><br>
+                <input type="text" id="contato" placeholder="Contato" required><br><br>
+                <select id="pedido" required>
+                    <option value="Ronpm500g">Rondelle PM 500</option>
+                    <option value="Ronpm1kg">Rondelle PM 1kg</option>
+                </select><br><br>
+                <input type="number" id="valor" placeholder="Valor Total" required><br><br>
+                <select id="pagamento" required>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                    <option value="Pix">Pix</option>
+                </select><br><br>
+
+                <button type="submit" onclick="submit">Salvar</button>
+            </form>
+           <table>
+    <thead>
+        <tr>
+            <th id="numPedido">Número do Pedido</th>
+            <th id="clinteName">Nome do Cliente</th>
+            <th id="contact">Contato</th>
+            <th id="pedido">Pedido do Cliente</th>
+            <th id="valueTT">Valor Total</th>
+            <th id="pagamentForm">Forma de pagamento</th>
+        </tr>
+    </thead>
+    <tbody id="tabelaPedidos">
+        
+    </tbody>
+</table>
+        </div>  
+        <script src="index.js"></script>  
+    </body>
+</html>
